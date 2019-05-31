@@ -1,0 +1,22 @@
+
+cd /home/ubuntu/RaspberryPiMouse/src/drivers/
++ cd /home/ubuntu/RaspberryPiMouse/src/drivers/
+/sbin/insmod rtmouse.ko
++ /sbin/insmod rtmouse.ko
+
+sleep 1
++ sleep 1
+chmod 666 /dev/rt*
++ chmod 666 /dev/rtbuzzer0 /dev/rtled0 /dev/rtled1 /dev/rtled2 /dev/rtled3 /dev/rtlightsensor0 /dev/rtmotor0 /dev/rtmotoren0 /dev/rtmotor_raw_l0 /dev/rtmotor_raw_r0 /dev/rtswitch0 /dev/rtswitch1 /dev/rtswitch2
+
+echo 0> /dev/rtmotoren0
++ echo
+echo 1 | tee /dev/rtled*
++ echo 1
++ tee /dev/rtled0 /dev/rtled1 /dev/rtled2 /dev/rtled3
+sleep 1
++ sleep 1
+echo 0 | tee /dev/rtled*
++ echo 0
++ tee /dev/rtled0 /dev/rtled1 /dev/rtled2 /dev/rtled3
+
