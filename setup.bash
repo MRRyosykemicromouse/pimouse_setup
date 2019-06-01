@@ -1,6 +1,6 @@
 #!/bin/bash -xve
 
-exec 2> /tmp/setup.log
+exec 2> /home/ubuntu/tmp/setup.log
 
 cd /home/ubuntu/RaspberryPiMouse/src/drivers/
 /sbin/insmod rtmouse.ko
@@ -12,4 +12,4 @@ echo 0> /dev/rtmotoren0
 echo 1 | tee /dev/rtled*
 sleep 1
 echo 0 | tee /dev/rtled*
-
+                                    
