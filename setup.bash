@@ -8,18 +8,7 @@ cd /home/ubuntu/RaspberryPiMouse/src/drivers/
 sleep 1
 chmod 666 /dev/rt*
 
-<<<<<<< HEAD
-echo 0>/dev/rtmotoren0
-
-echo 1| tee /dev/rtled*
-
-sleep 1
-
-echo 0| tee /dev/rtled*
-=======
 echo 0> /dev/rtmotoren0
 echo 1 | tee /dev/rtled*
 sleep 1
 echo 0 | tee /dev/rtled*
-                                    
->>>>>>> dev
